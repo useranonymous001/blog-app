@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>Blog Hub: Create Blog</title>
+  </head>
+  <style>
+    body {
+      font-family: cascadia code;
+    }
+  </style>
+
+  <body>
+    <%- include('./partials/nav') %>
+    <div class="container mt-5 bg-light p-4 rounded shadow">
+      <h1 class="text-center my-5" style="font-size: 3rem">
+        Create Your Blog<span class="font-weight-bold" style="color: #ff9900"
+          >Post</span
+        >
+      </h1>
+
+      <form
+        action="/blog/writeBlog/submit"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="coverImage" class="form-label">Cover Image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="coverImage"
+            name="coverImage"
+            aria-describedby="coverImage"
+            required
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="blogTitle" class="form-label" style="font-size: 1.25rem"
+            >Blog Title</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            id="blogTitle"
+            placeholder="Enter your blog title"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="blogBody" class="form-label" style="font-size: 1.25rem"
+            >Content</label
+          >
+          <textarea
+            class="form-control"
+            id="blogBody"
+            name="content"
+            rows="10"
+            placeholder="Write your blog content here"
+            required
+          ></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary btn-lg mt-4">
+            Publish
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <%- include('./partials/scripts') %>
+  </body>
+</html>
