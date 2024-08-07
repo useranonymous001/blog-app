@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %>
+    <title>About BlogHub</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #000a1a;
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+      }
+      .glowing-text {
+        color: #ff9900;
+        text-shadow: 0 0 2px #f39406, 0 0 10px #ff9900, 0 0 20px #ff9900,
+          0 0 40px #ff9900;
+        font-weight: bold;
+      }
+      .glowing-title-text {
+        color: white;
+        text-shadow: 0 0 2px #f39406, 0 0 10px #ff9900, 0 0 20px #ff9900,
+          0 0 40px #ff9900;
+        font-weight: bold;
+      }
+      .card {
+        background-color: #001833;
+        color: #ffffff;
+      }
+      .btn-dark,
+      .btn-primary,
+      .btn-info {
+        color: #ffffff;
+      }
+      footer {
+        background-color: #001833;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include("./partials/nav") %>
+    <div class="container mt-5">
+      <!-- Blog Application Information -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="display-4">
+            Welcome to Blog<span
+              class="glowing-title-text"
+              style="color: #ff9900"
+              >Hub</span
+            >
+          </h1>
+          <p class="lead" style="color: rgb(213, 210, 205)">
+            Your one-stop destination for all your blogging needs. Connect,
+            share, and discover amazing content! Our platform is designed to
+            provide a seamless and enriching experience for bloggers and readers
+            alike.
+          </p>
+          <p style="color: rgb(213, 210, 205)">
+            At BlogHub, we believe in the power of words and the impact of
+            stories. Whether you're an aspiring writer or an avid reader,
+            BlogHub offers a community where you can thrive and connect with
+            like-minded individuals. Join us today and start your blogging
+            journey!
+          </p>
+        </div>
+      </div>
+
+      <!-- Developer Information -->
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <h2 class="glowing-text">About the Developer</h2>
+        </div>
+        <div class="col-md-8 offset-md-2 mt-3">
+          <div class="card shadow">
+            <div class="card-body">
+              <p style="color: rgb(171, 171, 171)">
+                Hi, I'm
+                <span class="text-white fw-bold">Rohan Khatri</span>, the
+                developer of BlogHub. I am passionate about creating web
+                applications that bring value to users and enhance their online
+                experience. With a minimal background in Node.js, Express, and
+                MongoDB, I strive to build robust and user-friendly
+                applications. I believe in continuous learning and staying
+                updated with the latest technologies to provide the best
+                solutions for users.
+              </p>
+              <p>Connect with me on social media:</p>
+              <a
+                href="https://github.com/useranonymous001"
+                class="btn btn-dark mx-1"
+                target="_blank"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rohan-khatri-001bm/"
+                class="btn btn-primary mx-1"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a
+                href="https://x.com/KhatriRohan1106"
+                class="btn btn-info mx-1"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+              <a
+                href="https://facebook.com/rohan.khatri.94801"
+                class="btn btn-primary mx-1"
+                target="_blank"
+              >
+                <i class="fab fa-facebook"></i> Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonies Section -->
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <h2 class="glowing-text">What Our Users Say</h2>
+        </div>
+        <div class="col-md-4 mt-3">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="card-text">
+                "BlogHub has completely transformed the way I blog. It's
+                intuitive and packed with features!"
+              </p>
+              <footer class="blockquote-footer mt-2">Bandhana Mishra</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-3">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="card-text">
+                "BlogHub has been a game-changer for my writing career. The
+                platform's intuitive design and robust features make it easy to
+                connect with readers and fellow bloggers."
+              </p>
+              <footer class="blockquote-footer mt-2">Amrit Tamang</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-3">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="card-text">
+                "I love the community on BlogHub. I've connected with so many
+                like-minded bloggers!"
+              </p>
+              <footer class="blockquote-footer mt-2">Ningma Gurung</footer>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-3">
+          <div class="card shadow">
+            <div class="card-body">
+              <p class="card-text">
+                "The features and ease of use make BlogHub my go-to platform for
+                all my blogging needs."
+              </p>
+              <footer class="blockquote-footer mt-2">Auraj Dahal</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="text-white text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2024 BlogHub. All Rights Reserved.</p>
+        <p>Developed by [Your Name]</p>
+      </footer>
+    </div>
+
+    <%- include("./partials/scripts") %>
+  </body>
+</html>

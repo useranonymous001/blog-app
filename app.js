@@ -52,6 +52,12 @@ app.get("/home", async (req, res) => {
   });
 });
 
+app.get("/about-us", (req, res) => {
+  return res.render("about-us", {
+    user: req.user,
+  });
+});
+
 app.listen(PORT, (err) => {
   console.log(err ? err.message : `server started at port ${PORT}`);
 });

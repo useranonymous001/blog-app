@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %> 
+    <title>BlogHub: About</title>
+  </head>
+  <body style="font-family: 'Montserrat', sans-serif">
+    <%- include("./partials/nav") %> <% if (locals.user) { %>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h1
+            class="title-text"
+            style="color: #ff9900; font-weight: bold; font-size: 2.5rem"
+          >
+            Write About Yourself
+          </h1>
+          <form action="/user/profile/about" method="post">
+            <div class="form-group">
+              <label for="about">Write about yourself</label>
+              <textarea
+                class="form-control"
+                name="about"
+                id="about"
+                placeholder="Add a short description about yourself..."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <% } %> <%- include("./partials/footer") %> <%-
+    include("./partials/scripts") %>
+  </body>
+</html>

@@ -3,24 +3,22 @@
   <head>
     <%- include("./partials/head") %>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlogHub: Login</title>
 
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+  </style>
   <body>
     <%- include("./partials/nav") %>
 
     <div class="w-full h-screen bg-zinc-900 text-white">
       <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            class="mx-auto h-10 w-auto"
-            src="/images/logo.png"
-            alt="Your Company"
-          />
           <h2
             class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white-900"
           >
@@ -96,7 +94,6 @@
         </div>
       </div>
     </div>
-
-    <%- include("./partials/scripts") %>
+    <%- include("./partials/footer") %> <%- include("./partials/scripts") %>
   </body>
 </html>

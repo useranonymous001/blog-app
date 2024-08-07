@@ -6,7 +6,7 @@
   </head>
   <style>
     body {
-      font-family: cascadia code;
+      font-family: "Montserrat", sans-serif;
     }
   </style>
 
@@ -55,7 +55,7 @@
             class="form-control"
             name="new_title"
             id="blogTitle"
-            value ="<%= blog.title %>"
+            value="<%= blog.title %>"
             required
           />
         </div>
@@ -86,6 +86,7 @@
       </form>
     </div>
 
-    <% } %> <%- include('./partials/scripts') %>
+    <% } %> <%- include("./partials/footer") %> <%-
+    include('./partials/scripts') %>
   </body>
 </html>

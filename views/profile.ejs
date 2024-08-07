@@ -8,7 +8,7 @@
       body {
         background-color: #000a1a;
         color: #fff;
-        font-family: cascadia code;
+        font-family: "Montserrat", sans-serif;
       }
       .card {
         background-color: #011d2bdf;
@@ -62,7 +62,7 @@
             <div class="row">
               <div class="col-md-4 text-center">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src="<%= user.profileImageUrl %>"
                   alt="Profile Picture"
                   class="profile-picture"
                 />
@@ -76,10 +76,12 @@
                   <strong>author:</strong> <%= user.fullName %>
                 </p>
                 <div class="d-flex justify-content-between mt-5">
-                  <a href="/add-description" class="btn btn-custom"
+                  <a href="/user/profile/addDescription" class="btn btn-custom"
                     >Add Description</a
                   >
-                  <a href="/change-password" class="btn btn-warning-custom"
+                  <a
+                    href="/user/profile/change-password"
+                    class="btn btn-warning-custom"
                     >Change Password</a
                   >
                 </div>
@@ -141,7 +143,6 @@
       <a href="/user/login">Login</a>
     </p>
 
-    <% }%>
-    <!-- Bootstrap JS and dependencies -->
+    <% }%><%- include("./partials/footer") %>
   </body>
 </html>

@@ -13,7 +13,7 @@
       }
       body{
         background-color: #000a1a;
-        font-family: Cascadia Code;
+        font-family: "Montserrat", sans-serif;
     }
     </style>
   <body>
@@ -25,7 +25,7 @@
             Welcome to <span style="color: #fff; font-weight: bold;">Blog</span><span style="color: #ff9900; font-weight: bold;">Hub</span>
           </h1>
           
-          <p class="text-center mt-4 lead" style="font-size: 1.25rem; color: #cfcfcf; font-family: consolas;">
+          <p class="text-center mt-4 lead" style="font-size: 1.25rem; color: #cfcfcf;">
             Welcome to <span style="color: #ffffff; font-weight: bold;">Blog</span><span style="color: #ff9900; font-weight: bold;">Hub</span>, your ultimate destination for captivating stories and thought-provoking articles. Whether you're a passionate writer or an avid reader, Blog Hub offers a platform where creativity meets community. Dive into a world of diverse perspectives, share your unique voice, and connect with a vibrant network of bloggers. Join us today and be part of a journey where every word matters.
           </p>
         </header>
@@ -51,7 +51,7 @@
         </div>
         
           <div class="card-footer text-muted">
-              Posted by <%= blog.author.fullName %> on <%= blog.createdAt %>
+              Posted by <%= blog.author.fullName %> on <%= blog.createdAt.toJSON() %>
           </div>
       </div>
       </div>
@@ -79,6 +79,7 @@
         </nav>
       </div>
     </body>
-    
+    <%-
+    include("./partials/footer") %>
   </body>
 </html>

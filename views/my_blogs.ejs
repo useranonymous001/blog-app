@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <%- include ("./partials/head") %>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Blog Hub: Read</title>
   </head>
   <style>
@@ -13,7 +12,7 @@
     }
     body {
       background-color: #000a1a;
-      font-family: Cascadia Code;
+      font-family: "Montserrat", sans-serif;
       color: whitesmoke;
     }
   </style>
@@ -21,6 +20,7 @@
     <%- include ("./partials/nav") %>
 
     <div class="container">
+      <% if (locals.user) { %>
       <div class="mt-3 mb-3 h-100">
         <h2 style="color: #ff9900">Your Blogs</h2>
       </div>
@@ -102,7 +102,8 @@
 
         <% }) %>
       </div>
+      <% } %>
     </div>
-    <%- include ("./partials/scripts") %>
+    <%- include("./partials/footer") %> <%- include ("./partials/scripts") %>
   </body>
 </html>

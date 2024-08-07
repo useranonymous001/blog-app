@@ -23,7 +23,7 @@
           <a class="nav-link active" aria-current="page" href="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="/about-us">About Us</a>
         </li>
 
         <% if (locals.user) { %>
@@ -64,8 +64,13 @@
       <% if (locals.user) { %>
 
         <div class=" d-flex flex-row position-absolute end-0 p-2">
-          <div class=" align-content-center me-3">
-            <a class="nav-link text-white" href="/user/profile">Profile</a>
+          
+          <div class=" align-content-center rounded me-3 ">
+            <a class="nav-link text-white focus-ring" target="_blank" href="https://github.com/useranonymous001/blog-app">View Code</a>
+          </div>
+
+          <div class=" align-content-center  me-3">
+            <a class="nav-link" style="color: #ff9900;" href="/user/profile">Visit Profile</a>
           </div>
           <div>
             <img src="<%= user.profileImageUrl %>" alt="user profile" style="width: 50px; height: 50px;border-radius: 50%; object-fit: cover; overflow: hidden;" ></div>
@@ -94,7 +99,7 @@
       
       <% if(locals.success) { %>
     
-      <div class="alert alert-warning alert-dismissible fade show position-absolute top-0 end-0" role="alert">
+      <div class="alert alert-success alert-dismissible fade show position-absolute top-0 end-0" role="alert">
         <strong>Success !!</strong> <%= locals.success %>
         <button
           type="button"
