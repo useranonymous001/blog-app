@@ -98,11 +98,13 @@ router.get("/edit/post/:blogId", async (req, res) => {
 
 router.post("/edit/update", upload.single("coverImage"), async (req, res) => {
   try {
-    const { content, title } = req.body;
+    const { content, title, new_title } = req.body;
+
     const updatedBlog = await BLOG.findOneAndUpdate(
-      { author: req.user._id },
+      // { author: req.user._id },
+      { title },
       {
-        title,
+        title: new_title,
         content,
         coverImageUrl: `/uploads/${req.file.filename}`,
       }

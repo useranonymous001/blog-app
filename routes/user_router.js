@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const USER = require("../models/user_model");
+const BLOG = require("../models/blog_model");
 
 router.get("/signin", (req, res) => {
   return res.render("signin");
@@ -13,7 +14,6 @@ router.get("/login", (req, res) => {
 router.post("/signin", async (req, res) => {
   try {
     const { fullName, email, password } = req.body;
-
     await USER.create({
       fullName,
       email,
@@ -40,13 +40,23 @@ router.post("/login", async (req, res) => {
     });
   }
 });
-// user profile settings
 
-router.get("/profile", (req, res) => {
-  res.json({ message: "this is user profile section" });
-  // render everything here:
-  // profile/changePassword
-  // profile/about
+// user profile settings
+router.get("/profile", async (req, res) => {
+  try {
+    const user = await USER.findOne({ email: req.user.email }).select(
+      "-password"
+    );
+    const blogs = await BLOG.find({ author: req.user._id });
+    return res.render("profile", {
+      user,
+      blogs,
+    });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: `some error occured, ${error.message}` });
+  }
 });
 
 router.post("/profile/changePassword", async (req, res) => {

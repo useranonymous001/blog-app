@@ -94,7 +94,8 @@
             </div>
 
             <div class="card-footer text-muted">
-              Posted by <%= blog.author.fullName %> on <%= blog.createdAt %>
+              Posted by <%= blog.author.fullName %> on <%=
+              blog.createdAt.toJSON() %>
             </div>
           </div>
         </div>
