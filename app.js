@@ -44,6 +44,10 @@ app.use(express.json());
 app.use("/user", userRoute);
 app.use("/blog", blogRoute);
 
+app.get("/", (req, res) => {
+  return res.redirect("/home");
+});
+
 app.get("/home", async (req, res) => {
   const allBlog = await BLOG.find().populate("author").select("-password");
   res.render("home", {
