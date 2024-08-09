@@ -18,7 +18,7 @@ app.use(express.static(path.resolve("./public")));
 const BLOG = require("./models/blog_model");
 
 // function to connect to the mongoDB
-connectMongoDb(process.env.MONGO_URL)
+connectMongoDb(process.env.MONGODB_URI)
   .then(() => {
     console.log("mongoDB connected successfully");
   })
